@@ -74,10 +74,10 @@ function main() {
 
   gl.uniform4f(colorLocation, Math.random(), Math.random(), Math.random(), 1);
 
-  const opacityReductionNumber = 10;
+  const opacityReductionNumber = 6;
 
   function animate() {
-    gl.clearColor(0.17, 0.24, 0.31, 1);
+    gl.clearColor(0.26, 0.33, 0.38, 1);
 
     gl.clear(gl.COLOR_BUFFER_BIT);
 

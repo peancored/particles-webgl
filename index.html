@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title></title>
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
   <style>
     html, body {
       height: 100%;
@@ -14,11 +19,44 @@
       width: 100%;
       height: 100%;
     }
+
+    .container {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .love-you {
+      font-family: 'Amatic SC', cursive;
+      background: #e5e5e5;
+      color: black;
+      margin: 0 80px;
+      border-radius: 10px;
+      font-size: 7.5vw;
+      max-width: 800px;
+      text-align: center;
+      mix-blend-mode: screen;
+      padding: 20px 30px;
+    }
   </style>
 
   <script src="https://webgl2fundamentals.org/webgl/resources/webgl-utils.js"></script>
 </head>
 <body>
+  <div class="container">
+    <div class="love-you">
+      <div>
+      С 8 МАРТА ЮЛЕНЬКА!!!
+      </div>
+      <div>Ты - лучшее, что есть в моей жизни!</div>
+      <i class="fa fa-heart"></i>
+      <i class="fa fa-heart"></i>
+      <i class="fa fa-heart"></i>
+    </div>
+  </div>
   <canvas id="canvas"></canvas>
 
   <script id="vertex" type="x-shader/x-vertex">
@@ -33,7 +71,8 @@
       gl_Position = a_position;
       gl_PointSize = point_size;
 
-      v_fragColor = vec4(0.93, 0.94, 0.95, a_opacity);
+      // v_fragColor = vec4(0.93, 0.94, 0.95, a_opacity);
+      v_fragColor = vec4(0.16, 0.5, 0.73, a_opacity);
     }
   </script>
 
